@@ -1,7 +1,8 @@
 # My Book Project
 
 A web application that allows users to track the books they've read, including genres, personal ratings, and favorite status. This project showcases my skills in full-stack development, with a focus on creating a clean, responsive UI and a robust backend.
-
+Update: 10/09/2024 backend and frontend separated into different repositories 
+Link to Frontend: 
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
