@@ -1,7 +1,8 @@
 # My Book Project
 
 A web application that allows users to track the books they've read, including genres, personal ratings, and favorite status. This project showcases my skills in full-stack development, with a focus on creating a clean, responsive UI and a robust backend.
-
+Update: 10/09/2024 backend and frontend separated into different repositories 
+Link to Frontend: 
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -28,7 +29,7 @@ A web application that allows users to track the books they've read, including g
 - **Backend**: 
   - **Node.js**: JavaScript runtime for server-side development.
   - **Express.js**: Web application framework for Node.js.
-  - **MongoDB**: NoSQL database for storing book data (using the free tier of MongoDB Atlas or MongoDB Community Edition).
+  - **PostgreSQL**: Relational database for storing book data. 
 - **Testing**: 
   - **Jest**: For unit and integration testing.
   - **React Testing Library**: For testing React components.
