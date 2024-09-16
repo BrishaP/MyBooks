@@ -1,15 +1,27 @@
-// backend/routes/books.js
-const express = require('express');
-const router = express.Router();
-const Book = require('../models/Book'); // Assuming you have a Book model
+import express from 'express';
+import pool from '../database/db.js';
 
-router.get('/books', async (req, res) => {
+const router = express.Router();
+
+router.get('/', async (req, res) => {
   try {
-    const books = await Book.find();
-    res.status(200).json(books);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+    const result = await pool.query('SELECT * FROM books');
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
   }
 });
 
-module.exports = router;
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await pool.query('DELETE FROM books WHERE id = $1', [id]);
+    res.json({ message: 'Book deleted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
+
+export default router; // Ensure this is a default export
