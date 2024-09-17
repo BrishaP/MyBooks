@@ -82,3 +82,17 @@ Planned using gitub issues
   - [ ] Include screenshots, code snippets, and explanations of the technologies used.
 
 
+
+
+## API Endpoints
+
+| HTTP Method | Endpoint               | Description                                                                                      |
+|-------------|------------------------|--------------------------------------------------------------------------------------------------|
+| GET         | /books                 | Retrieve a list of all books in the database, with optional query parameters for filtering.       |
+| GET         | /books/:id             | Retrieve a specific book by its `id`.                                                            |
+| POST        | /books                 | Add a new book to the database (requires book data like title, author, genre, etc. in the request body). |
+| PUT         | /books/:id             | Update the details of a specific book by `id` (allows updating any of the book’s columns).        |
+| DELETE      | /books/:id             | Delete a specific book by `id` from the database.                                                |
+| GET         | /books/search          | Search for books based on a combination of parameters like title, author, genre, rating, etc.     |
+| PATCH       | /books/:id/rating      | Update the `rating` of a specific book by `id`.                                                  |
+| PATCH       | /books/:id/favorite    | Mark a book as a favorite or remove it from favorites by `id`.                                   |
