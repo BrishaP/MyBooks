@@ -17,9 +17,9 @@ app.get('/test', (req, res) => {
 });
 
 // Use the books router for /books routes
-app.get('/', booksRouter);
+app.use('/books', booksRouter);
 
-app.delete('/:id', booksRouter);
+// app.delete('/:id', booksRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
